@@ -1664,6 +1664,7 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 
     .row.product-list{
       max-width:100%;
+	  margin: 20px 0 0 0;
     }
 
     .contentOuterBdy {
@@ -1678,11 +1679,23 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
         text-align: left;
         margin-top: 0;
         line-height: 24px;
-        padding:8px 0 0;
-        color: #666666;
-        font-size: 24px;
+        padding:0 0 20px 0;
+		margin: 0;
+        color: #333333;
+        font-size: 30px;
+		font-weight: bold;
         text-transform: uppercase;
     }
+	
+	.contentOuterBdy .menu-text p{
+		color: #666666;
+		font-size: 16px;
+	}
+	
+	.contentOuterBdy .pagecountspan{
+		display: none;
+		
+	}
     .contentOuterBdy .sortingAndFilteringOuterDiv .productListHeader{
         display: none;
     }
@@ -2117,30 +2130,69 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     }
 
     .jsonProducts .productElement .productName a {
-        color: #333333;
+        color: #576873;
         font-size: 16px;
         text-transform: uppercase;
         display: block;
-        padding: 0 0.9375rem;
         text-decoration: none;
-        min-height: 77px;
+        min-height: 30px;
+		font-weight: bold;
+		margin: 0 0 15px 0;
+		display: block;
     }
 
     .jsonProducts .productElement .productDescriptionDiv a {
         color: #999;
         font-size: 12px;
         display: none;
-        padding: 0 0.9375rem;
+        padding: 0;
         text-decoration: none;
         min-height: 38px;
+		font-weight: bold;
     }
 
     .jsonProducts .productElement .productStockStatusDiv {
         color: #333333;
         font-size: 12px;
         text-transform: lowercase;
-        padding-top: 0.5rem;
+        padding: 10px 0;
     }
+	
+	.jsonProducts .productElement  .basketQtyInput{
+		display: none;
+	}
+	
+	.jsonProducts .productElement  .infoLnk{
+		background-color: #89a5b8;
+		color: #FFF;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 16px;
+		font-weight: 600;
+		padding: 0 8px 0;
+		margin-left: 4px;
+		margin-bottom: 10px;
+		text-transform: uppercase;
+		cursor: pointer;
+		border-radius: 4px;
+		height: 38px;
+		line-height: 38px;
+		display: inline-block;
+	}
+	
+	.jsonProducts .productElement  .infoLnk:hover{
+		text-decoration: none;
+		background-color: #718898;
+	}
+	
+	.jsonProducts .productElement .productExtId a{
+		font-size: 12px;
+		color: #666666;
+		font-style: italic;
+	}
+	
+	.jsonProducts .productElement .productExtId a:hover{
+		text-decoration: none;
+	}
 
     .jsonProducts .productElement .productStockStatusDiv span {
         width: 9px;
@@ -2171,7 +2223,7 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     }
 
     .jsonProducts .productElement .productPriceDiv {
-        color: #000000;
+        color: #89a5b8;
         font-size: 18px;
         font-weight: bold;
         text-transform: uppercase;
@@ -2182,6 +2234,10 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
         min-height: 26px;
         vertical-align: middle;
     }
+	
+	.jsonProducts .productElement .productPrevPriceDiv{
+		display: none;
+	}
 
 	.jsonProducts .productElement .productEsellerID {
         color: #1d1d1b;

@@ -39,6 +39,18 @@
     </div>
 	
     <div class="listBdy large-9 medium-9 small-12 columns">
+		
+		<div class="menu-description">
+			<h1 class="productListHeader">
+			  <eSeller:Select value-of="MenuCms:Title" />
+			</h1>
+			<div class="menu-text">
+				<p>
+					<eSeller:Select value-of="MenuCms:Text" />
+				</p>
+			</div>
+		</div>
+		
       <div class="categoryListBdy">
           <eSeller:Control ControlID="categoryListContent" CssClass="small-block-grid-2 medium-block-grid-4 large-block-grid-5" ControlType="ShopMenu" MenuType="Current" Depth="1" Mode="Image" />
       </div>
