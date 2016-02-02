@@ -1670,20 +1670,27 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     .contentOuterBdy .sortingAndFilteringOuterDiv .productListHeader{
         display: none;
     }
-    .leftSideListing{
-        border: 1px solid #cbcaca;
-        border-radius: 4px;
-    }
     .leftSideListing > h2,
     .leftSideListing ul > h2{
-        background-color: #ebebeb;
-        font-size: 18px;
+        background-color: #89a5b8;
+        font-size: 20px;
         font-weight: normal;
-        color: #000000;
+        color: #fff;
         text-transform: uppercase;
-        padding: 8px 12px 6px 12px;
+        padding:0 0 0 11px;
+		line-height: 40px;
+		border: 0;
         margin: 0;
+		border-radius: none;
     }
+	.leftSideListing  h2 a.clear-all{
+		color: #fff;
+		float: right;
+		margin: 0 10px 0 0;
+		font-size: 14px;
+		font-weight: bold;
+		text-transform: none;
+	}
     .leftSideListing ul.categoriesLeftSide > li,
     .leftSideListing ul.categoriesLeftSide > li > a{
         display: none;
@@ -1852,25 +1859,51 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
         line-height: 20px;
         cursor: pointer;
     }
-
-    #productFilteringDrop > li > div h2,
-    #productFilteringDrop .ec90resetFilter,
-    #productFilteringDrop .ec90resetFilterec90resetFilter,
-    #productFilteringDrop .ec90CheckboxStockec90CheckboxStock,
-    #productFilteringDrop .ec90CheckboxStock {
-        display: none;
-    }
-
+	
+	.customFieldFilterList h2.filterHeader, 
+	.ec90resetFilterec90resetFilter{
+		display: none;
+	}
+	
+	.customFieldFilterList h2{
+		margin: 0 0 14px 0;
+		padding: 0;
+		color: #666666;
+		font-size: 18px;
+		font-weight: bold;
+	}
+	.customFieldFilterList  input[type="checkbox"] {
+		display: none;
+	}
+	
+	.customFieldFilterList label{
+		height: 22px;
+		line-height: 22px;
+		padding-left: 36px;
+		background: url('/media/340/img/styled-checkbox.png') no-repeat left center;
+		width: 100%;
+	}	
+	.customFieldFilterList input[type=checkbox]:checked + label {
+		background-image: url('/media/340/img/styled-checkbox-checked.png');
+	}
+	
+	.customFieldFilterList ul.ec90listec90list  li{
+		padding: 0 0 13px 0;
+		
+	}
+	
+	#productFilteringDrop .customFieldFilterList ul.ec90listec90list  li span{
+		color: #000;
+	}
     #productFilteringDrop > li {
-        border-top: solid 1px #cbcaca;
+        border-bottom: solid 1px #cbcaca;
+		border-left: solid 1px #cbcaca;
+		border-right: solid 1px #cbcaca;
     }
     #productFilteringDrop > li.productFilteringManufacture{
         border-top: none;
     }
-    #productFilteringDrop > li.productFilteringManufacture,
-    #productFilteringDrop > li.customFieldFilterList{
-        display: none;
-    }
+
 
     #productFilteringDrop .filterHeader {
         color: #666666;
@@ -1899,7 +1932,6 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     }
 
     #productFilteringDrop .filterControlBdy {
-        display: none;
         padding: 10px;
     }
     #productFilteringDrop .filterControlBdy .ui-slider{
