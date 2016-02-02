@@ -649,7 +649,7 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 	/*** BroadTopMenu styles ***/
 
 	#BroadTopMenu {
-		min-height: 35px;
+		display: none;
 	}
 
 	.broadTopMenuQuickLinks {
@@ -733,7 +733,7 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 
     .accordion-navigation.loginMenuBdy > div.content .button input,
     .loginMenuBdy > div.content .button input {
-        background-color: #9fd548;
+        background-color: #fed03f;
         color: #FFF;
         font-size: 14px;
         font-weight: bold;
@@ -745,7 +745,7 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 
     .accordion-navigation.loginMenuBdy > div.content .button input:hover,
     .loginMenuBdy > div.content .button input:hover {
-        background-color: #8cc338;
+        background-color: #dfb83f;
     }
 
     #memberMenuPanel .forgotLoginLnk,
@@ -791,7 +791,7 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 
     .memberMenuLoggedIn > a.logoutLnk,
     .memberMenuLoggedIn > a.logoutLnk {
-        background-color: #9fd548;
+        background-color: #fed03f;
         color: #ffffff;
         font-size: 14px;
         font-weight: bold;
@@ -805,7 +805,7 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 
     .memberMenuLoggedIn > a.logoutLnk:hover,
     li .memberMenuLoggedIn > a.logoutLnk:hover {
-        background-color: #8cc338;
+        background-color: #dfb83f;
         text-decoration: none;
     }
 
@@ -907,7 +907,7 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     }
 
     #memberMenuPanel .sendPasswordReminder {
-        background-color: #9fd548;
+        background-color: #fed03f;
         color: #FFF;
         font-size: 14px;
         font-weight: bold;
@@ -919,7 +919,7 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     }
 
     #memberMenuPanel .sendPasswordReminder:hover {
-        background-color: #8cc338;
+        background-color: #dfb83f;
     }
 
     #memberMenuPanel .forgotPasswordInputContent {
@@ -963,19 +963,17 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     /*** Topbanner styles ***/
 
     #topbanner {
-        min-height: 83px;
+        padding: 16px 0.9375rem 12px 0 !important;
+        text-align: left;
     }
 
     #topbanner a {
-        display: block;
-        margin-top: 20px;
-        text-align: center;
+
     }
 
     /*** Topmenu styles ***/
 
     .sticky-navigation{
-
       position:fixed;
       top:0;
       z-index:9;
@@ -1000,9 +998,9 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 
     #topMenuQuickLinks ul.f-dropdown {
         /*top: 198px !important;	*/
-        border: solid 2px #cccecd;
-        border-top: solid 1px #cccecd;
-        border-bottom: solid 6px #cccecd;
+        border: solid 2px #92acbe;
+        border-top: solid 1px #92acbe;
+        border-bottom: solid 6px #92acbe;
         /*position: fixed !important;*/
     }
 
@@ -1028,18 +1026,18 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 
     #topMenuQuickLinks > ul > li > a,
 	#topMenuQuickLinks > ul > li > .clListLink > a {
-        color: #333333;
+        color: #FFFFFF;
         font-size: 14px;
         padding-right: 22px;
         margin-right: 10px;
         display: block;
         position: relative;
-		line-height: 47px;
-		font-weight: 700;
+		line-height: 56px;
+		font-weight: normal;
         text-transform: uppercase;
     }
 
-    #topMenuQuickLinks li.active a:before,
+    /*#topMenuQuickLinks li.active a:before,
     #topMenuQuickLinks li.activeParent a:before {
         content: "\f0d7";
         font-family: FontAwesome;
@@ -1054,7 +1052,7 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
         margin-left: -14px;
         text-decoration: none;
 		line-height: 16px;
-    }
+    }*/
 
     #topMenuQuickLinks ul.shopMenu li:last-child a {
         background-image: none;
@@ -1122,17 +1120,15 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 
     .infoTextsMobile span:last-child {
         background-image: none;
-        padding: 0px;
-        margin: 0px;
+        padding: 0;
+        margin: 0;
     }
 
     /*** advanced Search styles ***/
 
     #advancedSearchBdy {
-        display: none;
-        position: relative;
-		min-width: 268px;
-		padding: 24px 21px 0 0;
+		min-width: 343px;
+		padding: 44px 18px 0 0;
     }
 
     #advancedSearchBdy h2 {
@@ -1141,34 +1137,34 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 
     #advancedSearchBdy input.textbox {
         margin: 0;
-        height: 42px;
-        border: medium none;
+        border: none;
+        border-bottom: 1px solid #c1dbec;
         background-color: #FFFFFF;
-        color: #000000;
-        font-size: 18px;
-		border-radius: 4px !important;
-        padding-left: 8px;
-        min-width: 250px;
+        background-image: url('/media/340/img/searchIconLarge.png');
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        color: #999999;
+        font-size: 14px;
+        font-family: Arial, sans-serif;
+		border-radius: 0 !important;
+        padding-left: 36px;
+        min-width: 325px;
     }
 
     #advancedSearchBdy input.submit {
 		position: absolute;
-		top: 24px;
-		right: 21px;
-        background-color: #a6da56;
-        border: medium none;
-		height: 42px;
-		width: 42px;
+		top: 52px;
+		right: 18px;
+        color: #999999;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+        background-color: transparent;
+        border: none;
         padding: 0;
-        background-image: url('/media/340/img/searchIconLarge.png');
-        background-repeat: no-repeat;
-        background-position: center center;
-		border-radius: 0 4px 4px 0 !important;
+		border-radius: 0 !important;
     }
-
-	#advancedSearchBdy input.submit:hover {
-		background-color: #8cc338;
-	}
 
     /*** Advanced search results styling ***/
 
@@ -1270,20 +1266,15 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 	#miniBasket > a,
 	#memberMenuDesktop {
 		background-color: transparent;
-		border-right: solid 2px #e5e4e4;
-		border-left: solid 2px #e5e4e4;
-		min-height: 88px;
 		position: relative;
 		min-width: 224px;
 		text-align: left;
 	}
 
 	#memberMenuDesktop {
-		border-right: medium none;
 		font-size: 14px;
-		color: #1d1d1b;
+		color: #999999;
 		font-weight: 900;
-		text-transform: uppercase;
 		display: block;
 	}
 
@@ -1291,27 +1282,33 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 		cursor: pointer;
 		text-decoration: none;
 	}
-
-	#miniBasket > a:after,
-	#memberMenuDesktop:after {
-		content: "\f0d7";
-		font-family: FontAwesome;
-		font-style: normal;
-		font-weight: normal;
-		text-decoration: inherit;
-		color: #777777;
-		font-size: 18px;
-		position: absolute;
-		right: 8px;
-		top: 31px;
-	}
+    #memberMenuDesktop .logged-customer,
+    #memberMenuDesktop .logged-customer span{
+        display: inline-block;
+        font-weight: 700;
+    }
+    #memberMenuDesktop .logged-customer span.memberMenuText{
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 13px;
+    }
+    #memberMenuDesktop .logged-customer span.memberMenuText:after {
+        content: "\f13a";
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+        color: #cadfee;
+        font-size: 18px;
+        position: absolute;
+        right: -20px;
+        top: 56px;
+    }
 
     #miniBasketMobile a:hover {
         background-color: #efefef;
     }
 
-	#miniBasket .basketCartImg,
-	#memberMenuDesktop .memberMenuImg,
 	.searchIconImg {
 		background-color: #fff;
 		border-radius: 50%;
@@ -1322,36 +1319,47 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 		padding-top: 10px;
 		position: relative;
 	}
+    #miniBasket .basketCartImg{
+        padding-top: 3px;
+        float: left;
+        position: relative;
+    }
 
 	#memberMenuDesktop .memberMenuImg,
 	.searchIconImg {
 		margin-right: 10px;
 	}
+    #memberMenuDesktop .memberMenuImg img,
+    #miniBasket .basketCartImg img{
+        vertical-align: top;
+    }
 
     .accordion-navigation.loginMenuBdy{
         position: relative;
     }
     .accordion-navigation.loginMenuBdy .new-customer-link{
-        color: #1d1d1b;
+        color: #999;
         font-size: 12px;
         position: absolute;
-        bottom: 16px;
-        left: 69px;
+        bottom: -6px;
+        left: 42px;
         z-index: 9999;
-        text-decoration: underline;
+        text-decoration: none;
         cursor: pointer;
     }
 
     #miniBasket a.show-for-medium-up,
 	#memberMenuDesktop {
-        padding: 21px 8px 0;
+        padding: 44px 8px 0 12px;
         min-width: 185px;
         position: relative;
     }
+    #miniBasket a.show-for-medium-up{
+        padding-left: 36px;
+        height: auto !important;
+        overflow: hidden;
+    }
 
-	#memberMenuDesktop {
-		min-width: 235px;
-	}
 
    #miniBasketMobile a.show-for-small-only span {
         color: #ffffff;
@@ -1372,38 +1380,43 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 	#miniBasket .miniBasketItemCount {
 		position: absolute;
 		display: block;
-		background-color: #ff0000;
+		background-color: #fed54d;
 		border-radius: 50%;
-		width: 33px;
-		height: 33px;
+		width: 24px;
+		height: 24px;
 		color: #ffffff;
+        font-family: Arial, sans-serif;
 		font-size: 14px;
-		font-weight: 900;
 		text-align: center;
-		line-height: 33px;
-		top: -5px;
-		right: -17px;
+		line-height: 24px;
+		top: -15px;
+		right: -10px;
 	}
 
 
 	#miniBasket span.miniBasketText {
-		margin-left: 26px;
+		margin-left: 18px;
 		font-size: 14px;
-		color: #1d1d1b;
-		font-weight: 900;
-		margin-right: 26px;
+		color: #999;
+        float: left;
 	}
+    #miniBasket span.miniBasketText .mini-basket-title{
+        font-weight: 700;
+    }
+    #miniBasket span.miniBasketText .mini-basket-value{
+        font-size: 12px;
+    }
 
     #miniBasketMobile span.miniBasketText {
         color: #ffffff;
         font-size: 14px;
-        margin: 0px;
+        margin: 0;
         text-decoration: none;
     }
 
     #miniBasket a.show-for-small-only div {
         max-width: 29px;
-        margin: 0px auto;
+        margin: 0 auto;
     }
 
     #basketPanel, #basketPanelMobile {
@@ -1495,7 +1508,7 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     }
 
     #basketPanel .goToShoppingcartLnk, #basketPanelMobile .goToShoppingcartLnk {
-        background-color: #9fd548;
+        background-color: #fed03f;
         color: #ffffff;
         font-size: 18px;
         font-weight: bold;
@@ -1508,11 +1521,14 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     }
 
     #basketPanel .goToShoppingcartLnk:hover, #basketPanelMobile .goToShoppingcartLnk:hover {
-        background-color: #8cc338;
+        background-color: #dfb83f;
         text-decoration: none;
     }
 
     /*** Frontpage styles ***/
+    #topMenu{
+        padding: 0 !important;
+    }
 
     .frontArea > br,
 	#topMenuQuickLinks .shopMenu > li > .clListIcon	{
@@ -2203,7 +2219,7 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 
 
     .productElement .addToBasketLnk {
-        background-color: #9fd548;
+        background-color: #fed03f;
         color: #FFF;
         font-family: 'Open Sans', sans-serif;
         font-size: 16px;
@@ -2219,7 +2235,7 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     }
 
     .productElement .addToBasketLnk:hover {
-        background-color: #8cc338;
+        background-color: #dfb83f;
     }
 
     .productElement .productRemoveFromFavorites {
@@ -2414,7 +2430,7 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     }
 
     #main #ShopContent .pInfoBasket .etBasket .ecBB a.addToBasketBtn:hover {
-        background-color: #8cc338;
+        background-color: #dfb83f;
     }
 
     .ucImageControltrImg,
@@ -3366,7 +3382,7 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     }
 
     .customerCreateAndEdit input.customerEditorButton {
-        background-color: #9fd548;
+        background-color: #fed03f;
         color: #ffffff;
         font-size: 16px;
         font-weight: bold;
@@ -3378,7 +3394,7 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     }
 
     .customerCreateAndEdit input.customerEditorButton:hover {
-        background-color: #8cc338;
+        background-color: #dfb83f;
         text-decoration: none;
     }
 
