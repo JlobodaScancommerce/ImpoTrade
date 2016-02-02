@@ -145,94 +145,18 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 {
     font-size: 0;
     line-height: 0;
-
     position: absolute;
     top: 50%;
-
     display: block;
-
-    width: 20px;
-    height: 30px;
+    width: 21px;
+    height: 21px;
     margin-top: -15px;
     padding: 0;
-
     cursor: pointer;
-
     color: transparent;
     border: none;
     outline: none;
     background: transparent;
-}
-.slick-prev:hover,
-.slick-prev:focus,
-.slick-next:hover,
-.slick-next:focus
-{
-    color: transparent;
-    outline: none;
-    background: transparent;
-}
-.slick-prev:hover:before,
-.slick-prev:focus:before,
-.slick-next:hover:before,
-.slick-next:focus:before
-{
-    opacity: 1;
-}
-.slick-prev.slick-disabled:before,
-.slick-next.slick-disabled:before
-{
-    opacity: .25;
-}
-
-.slick-prev:before,
-.slick-next:before
-{
-    font-family: 'slick';
-    font-size: 20px;
-    line-height: 1;
-
-    opacity: .75;
-    color: white;
-
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-.slick-prev
-{
-    left: -25px;
-}
-[dir='rtl'] .slick-prev
-{
-    right: -25px;
-    left: auto;
-}
-.slick-prev:before
-{
-    content: 'ÃƒÂ¢Ã¢â‚¬ ?';
-}
-[dir='rtl'] .slick-prev:before
-{
-    content: 'ÃƒÂ¢Ã¢â‚¬ Ã¢â‚¬â„¢';
-}
-
-.slick-next
-{
-    right: -25px;
-}
-[dir='rtl'] .slick-next
-{
-    right: auto;
-    left: -25px;
-}
-.slick-next:before
-{
-    content: 'ÃƒÂ¢Ã¢â‚¬ Ã¢â‚¬â„¢';
-}
-[dir='rtl'] .slick-next:before
-{
-    content: 'ÃƒÂ¢Ã¢â‚¬ ?';
 }
 
 /* Dots */
@@ -454,7 +378,7 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 		padding: 0 10px;
 	}
 	
-	.content-left img{
+	.content-left .teaser-boxes img{
 		width: 100%;
 		max-height: 245px;
 	}
@@ -479,6 +403,9 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 		font-weight: normal;
 		display: block;
 	}	
+	.sidebar-right a{
+		color: #000;
+	}
 	
 	
 	.news-content div.columns{
@@ -509,6 +436,21 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 		line-height: 16px;
 	}
 	
+	.teaser-boxes{
+		margin: 0 0 5px 0;
+	}
+	
+	.post-content-slider {
+		padding: 0 40px;
+	}
+	
+	.post-content-slider  .slider-box{
+		padding: 0 10px;
+	}
+	
+	.post-content-slider  .slider-box img{
+		border: 1px solid #e0ebf2;
+	}
     #mainInnerBdy {
         min-height: 600px;
     }
@@ -3587,37 +3529,15 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 	/*** Slick carrousel styles ***/
 
 	.slick-prev {
-		left: -10px;
+		left: 10px;
+		background:url('/media/340/img/arrow-prev.png') no-repeat 0 0;
 	}
 
 	.slick-next {
-		right: -10px;
+		right: 10px;
+		background:url('/media/340/img/arrow-next.png') no-repeat 0 0;
 	}
 
-	.slick-prev:before {
-		content: "\f053";
-		font-family: FontAwesome;
-		font-style: normal;
-		font-weight: normal;
-		text-decoration: inherit;
-		color: #000;
-		font-size: 30px;
-	}
-
-	.slick-next:before {
-		content: "\f054";
-		font-family: FontAwesome;
-		font-style: normal;
-		font-weight: normal;
-		text-decoration: inherit;
-		color: #000;
-		font-size: 30px;
-	}
-
-	.frontpageCarousel .slick-prev:before,
-	.frontpageCarousel .slick-next:before {
-		color: #ffffff;
-	}
 
 	.frontpageCarousel .slick-prev {
 		left: 10px;
@@ -4367,14 +4287,26 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 		min-height: 488px;
 	}
 	
-	.content-left img{
+	.content-left .teaser-boxes  img{
 		width: 100%;
 		max-height: 245px;
 	}
 	.news-content {
 		padding: 0 0 20px 0;
 	}
-	
+	.post-content-slider {
+		padding: 0;
+	}
+	.post-content-slider  .slick-prev, 
+	.post-content-slider  .slick-next{
+		display: none !important;
+	}
+}
+
+@media only screen and (max-width:480px){
+	.post-content-slider img{
+		width: 100%;
+	}
 }
 
 @media only screen and (max-width:320px){
@@ -4385,7 +4317,12 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 		max-height: 414px;
 		min-height: 414px;
 	}
+	.post-content-slider img{
+		width: 100%;
+	}
 }
+
+
 
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
 
