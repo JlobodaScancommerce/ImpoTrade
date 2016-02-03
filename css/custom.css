@@ -569,7 +569,7 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     }
 
     .left-off-canvas-menu {
-        background-color: #f0eeee;
+        background-color: #FFFFFF;
     }
 
     .left-off-canvas-menu .bannerBdy {
@@ -603,35 +603,38 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     }
 
     .left-off-canvas-menu .productMenuAllMobile li a {
-        background-color: #f0eeee;
+        background-color: #ffffff;
         font-size: 20px;
-        color: #000;
+        color: #333333;
         text-align: left;
         width: 100%;
         display: block;
-        padding: 0.5rem 1rem;
+        padding: 0.6rem 1rem;
         line-height: normal;
         text-decoration: none;
         position: relative;
         text-transform: uppercase;
     }
 
-    .left-off-canvas-menu .productMenuAllMobile li.active > a,
+    /*.left-off-canvas-menu .productMenuAllMobile li.active > a,
     .left-off-canvas-menu .productMenuAllMobile li.activeParent > a {
         font-weight: bold;
-    }
+    }*/
 
     .left-off-canvas-menu .productMenuAllMobile li ul li {
         margin-right: 0px;
     }
 
     .left-off-canvas-menu .productMenuAllMobile li ul li a {
-        background-color: #e3e3e3;
+        background-color: #f0eeee;
         font-size: 16px;
         color: #333333;
     }
+    .left-off-canvas-menu .productMenuAllMobile li ul li ul li a{
+        background-color: #e3e3e3;
+    }
 
-    .left-off-canvas-menu .productMenuAllMobile li a.hasSubMenu:after {
+    /*.left-off-canvas-menu .productMenuAllMobile li a.hasSubMenu:after {
         content: "\f105";
         font-family: FontAwesome;
         font-style: normal;
@@ -644,7 +647,7 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 
     .left-off-canvas-menu .productMenuAllMobile li a.hasSubMenu.active:after {
         content: "\f107";
-    }
+    }*/
 
 	/*** BroadTopMenu styles ***/
 
@@ -832,17 +835,19 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     }
 
     #memberMenuPanelMobile .sendPasswordReminder {
-        background-color: #69C99C;
+        background-color: #fed03f;
         color: #FFF;
         font-size: 14px;
         padding: 6px 10px;
         text-transform: uppercase;
         border: medium none;
         float:right;
+        border-radius: 4px !important;
+        font-weight: bold;
     }
 
     #memberMenuPanelMobile .sendPasswordReminder:hover {
-        background-color: #61B88F;
+        background-color: #dfb83f;
     }
 
     #memberMenuPanelMobile .forgotPasswordInputContent {
@@ -873,6 +878,7 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
         background-color: #666;
         color: #FFF;
         font-size: 14px;
+        font-weight: bold;
         padding: 6px 8px;
         float:left;
         margin: 0;
@@ -880,6 +886,7 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
         text-transform: uppercase;
         display: inline-block;
         line-height: normal;
+        border-radius: 4px;
     }
 
 	#memberMenuPanel .customerLoginBdy,
@@ -1165,6 +1172,9 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
         padding: 0;
 		border-radius: 0 !important;
     }
+    .tablet-search-button{
+        display: none;
+    }
 
     /*** Advanced search results styling ***/
 
@@ -1243,9 +1253,9 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 
     /*** Mini basket styles ***/
 
-    #miniBasket > a, #miniBasketMobile a {
-        background:#efefef;
-        height:61px;
+    #miniBasket > a, #miniBasketMobile > a {
+        background: #92acbe;
+        height: 56px;
         text-align: left;
         position: relative;
         display: block;
@@ -1255,10 +1265,10 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     #miniBasketMobile .miniBasketItemCount{
       display:block;
       position:relative;
-      background: url('/media/340/img/icon-basket.png') no-repeat center center;
+      background: url('/media/340/img/mobile_basket.png') no-repeat center center;
       width:48px;
-      height:61px;
-      margin:0 auto;
+      height: 56px;
+      margin: 0 auto;
     }
 
 
@@ -1274,7 +1284,7 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 	#memberMenuDesktop {
 		font-size: 14px;
 		color: #999999;
-		font-weight: 900;
+		font-weight: 700;
 		display: block;
 	}
 
@@ -1299,15 +1309,12 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
         font-weight: normal;
         text-decoration: inherit;
         color: #cadfee;
-        font-size: 18px;
+        font-size: 20px;
         position: absolute;
         right: -20px;
         top: 56px;
     }
 
-    #miniBasketMobile a:hover {
-        background-color: #efefef;
-    }
 
 	.searchIconImg {
 		background-color: #fff;
@@ -1342,7 +1349,7 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
         font-size: 12px;
         position: absolute;
         bottom: -6px;
-        left: 42px;
+        left: 46px;
         z-index: 9999;
         text-decoration: none;
         cursor: pointer;
@@ -1364,17 +1371,17 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
    #miniBasketMobile a.show-for-small-only span {
         color: #ffffff;
         font-size: 14px;
-        font-weight: bold;
-        background-color: #ff0000;
+        font-weight: normal;
+        background-color: #fed54d;
         display: inline-block;
         border-radius: 50%;
         text-align: center;
-        width: 32px;
-        height: 32px;
-        line-height:32px;
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
         position: absolute;
-        top: 4px;
-        right: -15px;
+        top: 1px;
+        right: -6px;
     }
 
 	#miniBasket .miniBasketItemCount {
@@ -3754,6 +3761,10 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     /*** Social Media ***/
 
     /*** Mobile topmenu styles ***/
+    #topbanner{
+        padding: 10px;
+        text-align: center;
+    }
 
     .mobileTopMenuBdy {
         width: 75%;
@@ -3774,33 +3785,28 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     }
 
     #basketPanel.f-open-dropdown, #basketPanelMobile.f-open-dropdown {
-        left: auto !important;
-        right: 0.5rem !important;
-    }
-
-    #topMenu {
-        padding: 0px;
-        margin-top: 1rem;
+        left: 0 !important;
+        right: auto !important;
+        width: 100% !important;
     }
 
     #mobileTopMenu {
         position: relative;
-        background-color: #efefef;
-        height: 61px;
+        background-color: #92acbe;
+        height: 56px;
     }
 
     #mobileTopMenu > div {
 
-        width:33.3337%;
-        float:left;
-        border:0;
-        padding: 0px;
+        width: 33.3337%;
+        float: left;
+        border: 0;
+        padding: 0;
     }
 
     #mobileTopMenu > div a {
         display: table;
         width: 100%;
-
         text-decoration: none;
     }
 
@@ -3815,28 +3821,28 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     #mobileTopMenu .mobileMenu,
     #mobileTopMenu .mobileMemberMenu,
     #mobileTopMenu .mobileSearch {
-        background-color: #efefef;
+        background-color: #92acbe;
     }
 
     #mobileTopMenu .mobileMenu a,
     #mobileTopMenu .mobileMemberMenu a,
     #mobileTopMenu .mobileSearch a{
       display:block;
-      height:61px;
+      height:56px;
       margin:0;
       width:100%;
     }
 
     #mobileTopMenu .mobileMenu a{
-      background:url('/media/340/img/icon-menu.png') no-repeat center center;
+      background:url('/media/340/img/mobile_menu.png') no-repeat center center;
     }
 
     #mobileTopMenu .mobileMemberMenu a{
-      background:url('/media/340/img/icon-user.png') no-repeat center center;
+      background:url('/media/340/img/mobile_member.png') no-repeat center center;
     }
 
     #mobileTopMenu .mobileSearch a{
-      background:url('/media/340/img/icon-search.png') no-repeat center center;
+      background:url('/media/340/img/mobile_search.png') no-repeat center center;
     }
 
 
@@ -3849,13 +3855,17 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     }
 
     #memberMenuPanelMobile {
-        top: 58px !important;
+        top: 54px !important;
     }
 
     /*** advanced Search styles ***/
 
+    #advancedSearchBdy,
+    .infoTextsMobile.show-for-small-only{
+        display: none !important;
+    }
     #advancedSearchBdy.active {
-        display: block;
+        display: block !important;
         position: absolute;
         z-index: 100;
         background-color: #fff;
@@ -3864,7 +3874,9 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
         padding: 0.5rem;
         box-shadow:0px 7px 10px -4px #000;
         margin: 0;
-        top: 92px;
+        top: 56px;
+        min-width: 100px;
+        width: 100%;
     }
 
     #advancedSearchBdy.active input {
@@ -3875,10 +3887,13 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 
     #advancedSearchBdy.active input.textbox {
         width: 80%;
+        min-width: 100px;
+        border-bottom: none;
     }
 
     #advancedSearchBdy.active input.submit {
         width: 16%;
+        vertical-align: middle;
     }
 
     /*** Search results styles ***/
@@ -3903,9 +3918,7 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
         height: 30px;
         line-height: 29px;
     }
-    .left-off-canvas-menu .productMenuAllMobile li a{
-        font-size: 16px;
-    }
+
 
     .sortingContainer:after {
         top: -3px;
@@ -4540,19 +4553,13 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 
 	/*** right topmenu styles ***/
 
-	#miniBasket a.show-for-medium-up > .miniBasketText,
-	#memberMenuDesktop .memberMenuText {
-		display: none;
-	}
+
 
 	#memberMenuDesktop,
 	#miniBasket a.show-for-medium-up {
 		min-width: 100px;
 	}
 
-	#memberMenuPanel {
-		right: 114px;
-	}
 
 	#topMenuQuickLinks > ul > li > a,
 	#topMenuQuickLinks > ul > li > .clListLink > a {
@@ -4572,6 +4579,64 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 		padding-left: 0;
 		padding-right: 10px;
 	}
+
+    /* Top Panel styles */
+
+    #topbanner{
+        padding: 10px !important;
+    }
+
+    .tablet-search-button{
+        display: block;
+        padding: 28px 8px 0 0;
+    }
+    #memberMenuDesktop{
+        padding-top: 28px;
+    }
+    #miniBasket a.show-for-medium-up{
+        padding: 28px 8px 0 44px;
+    }
+    #memberMenuPanel {
+        top: 65px;
+    }
+    #memberMenuDesktop .logged-customer span.memberMenuText:after{
+        top: 41px;
+    }
+    .search-text{
+        background: url('/media/340/img/searchIconLarge.png') no-repeat 0 3px;
+        color: #999999;
+        font-size: 12px;
+        padding-left: 32px;
+        text-align: left;
+    }
+    .search-text .search-title{
+        font-size: 14px;
+        line-height: 17px;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+    #advancedSearchBdy{
+        display: none;
+    }
+
+    #advancedSearchBdy.active{
+        display: block;
+        position: absolute;
+        top: 63px;
+        padding: 0;
+        z-index: 999999;
+    }
+    #advancedSearchBdy input.textbox{
+        background-image: none;
+        padding-left: 8px;
+        min-width: 170px;
+        max-width: 233px;
+    }
+    #advancedSearchBdy input.submit{
+        top: 9px;
+        left: 200px
+    }
+
 
 } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
 
