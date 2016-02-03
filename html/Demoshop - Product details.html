@@ -6,15 +6,16 @@
 </style>
 
 <div class="productInfoBdy clearfix" itemscope="" itemtype="http://schema.org/Product">
-    <div class="productInfoBackDiv">
-        <a id="navigateParentLnk"><i class="fa fa-angle-left"></i>&amp;nbsp;<eSeller:Select text="label_navigate_parentURL" /></a>
-    </div>
+   
     <script type="text/javascript">
         var getParentUrl = '<eSeller:Select Value-Of="Context:NavigateUrlParent.NavigateUrl" />';
 
         $('.productInfoBackDiv #navigateParentLnk').attr('href', getParentUrl);
     </script>
     <div class="productInfoMiddleDiv">
+		 <div class="productInfoBackDiv">
+			<a id="navigateParentLnk"><i class="fa fa-angle-left"></i><eSeller:Select text="label_navigate_parentURL" /></a>
+		</div>
         <!--Product image area start-->
         <div class="imageBdy">
             <eSeller:Control ControlID="productimages" ControlType="ProductImages" />
@@ -47,6 +48,9 @@
         <!--Product name area end-->
     </div>
     <div class="productInfoBottomDiv">
+		<span class="productIdSpan">
+			<eSeller:Select text="label_productIDText" />:&amp;nbsp;<eSeller:Select Value-Of="Product:ProductID" />
+		</span>
 		<!-- Product variants selector -->
 		<div class="variantsSelectorBdy">
 			<eSeller:If IsTrue="Product:HasVariants">
@@ -76,6 +80,7 @@
                     </div><div style="clear:both;"></div>
                 </eSeller:If>
                 <eSeller:If IsTrue="Product:HasBetterPricing">
+					<!--HasBetterPricing-->
                     <div class="betterPricingArea">
                         <div style="float:left" class="betterPricingVol">
                             <eSeller:Select text="label_Quantity1_text" />&amp;nbsp;<b><eSeller:Select Value-Of="Product:BetterPricing.QuantityFormatted" /></b>
@@ -149,10 +154,7 @@
 					</eSeller:If>
                 </div>
             </div><div style="clear:both;"></div>
-            <!--Stock status area end-->
-			<span class="productIdSpan">
-				<eSeller:Select text="label_productIDText" />:&amp;nbsp;<eSeller:Select Value-Of="Product:ProductID" />
-			</span>
+            <!--Stock status area end-->			
             <!--Basket area start-->
             <div class="pInfoBasket clearfix">
                 <eSeller:If IsFalse="Product:HasVariants">
