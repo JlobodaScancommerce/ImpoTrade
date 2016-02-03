@@ -347,9 +347,9 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     }
 
     #main {
-        margin: 0px auto;
+        margin: 0 auto;
         max-width: 1200px;
-        padding-bottom:150px;   /* Height of the footer + spacer you may want*/
+        padding-bottom: 250px;   /* Height of the footer + spacer you may want*/
     }	
 	.home-page #main {
 		max-width: 100%;
@@ -472,8 +472,8 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
         position:absolute;
         bottom:0;
         width:100%;
-        height:150px;  /* Height of the footer */
-        background:#efefef;
+        height: 250px;  /* Height of the footer */
+        background:#f7f9fa;
     }
 
     /** Social Media Bottom **/
@@ -2715,7 +2715,7 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     }
 
     #bottom .bottomPaneText {
-        background-color: #b4b4b4;
+        background-color: #d4dbdf;
         min-height: 35px;
         color: #000;
         font-size: 12px;
@@ -3743,6 +3743,13 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 
     /*** Mobile template styles ***/
 
+    .home-page #outerBdy {
+        background-image: none !important;
+    }
+    #outerBdy {
+        background-image: none !important;
+    }
+
     #main {
         padding-bottom: 0px;
     }
@@ -3762,7 +3769,7 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 
     /*** Mobile topmenu styles ***/
     #topbanner{
-        padding: 10px;
+        padding: 10px !important;
         text-align: center;
     }
 
@@ -4478,9 +4485,11 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 	}
 	.home-page #outerBdy {
         background-image: url('/media/340/img/bg-mobile.jpg');
+        background-repeat: repeat-x;
 	}	
 	 #outerBdy {
         background-image: url('/media/340/img/bg-mobile-inner.jpg');
+         background-repeat: repeat-x;
 	}
 
 }
@@ -4583,7 +4592,10 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     /* Top Panel styles */
 
     #topbanner{
-        padding: 10px !important;
+        padding: 11px !important;
+    }
+    #topMenu{
+        padding: 0 11px !important;
     }
 
     .tablet-search-button{
