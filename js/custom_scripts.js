@@ -891,7 +891,22 @@ return d.join("&").replace(xc,"+")},_.fn.extend({serialize:function(){return _.p
 
 // Custom Scripts
 
+function detectMobile(el){
+	if($(window).width()  < 490){
+		el.toggleClass('collapsed');
+		el.closest('.filterControlBdy').find('.ec90FilterCheckboxec90FilterCheckbox').toggle();	
+	} 
+}
+
+
+
 $( document ).ready(function() {
+	
+	$('.customFieldFilterList h2').click(function(e) {	
+			detectMobile($(this));
+		});		
+
+
 	if ( window.location.pathname == '/' ){
 		$('body').addClass('home-page');
 	} else {
@@ -993,6 +1008,10 @@ $( document ).ready(function() {
             $(this).removeAttr('href').addClass('hasSubMenu');
         }
     });
+	
+	$('.clear-all').click(function() {
+		$('ul.ec90listec90list').find('li input[type=checkbox]').attr('checked',false);
+	});
 
     $( ".productMenuAllMobile li a.hasSubMenu" ).click(function() {
         $(this).toggleClass('active');
