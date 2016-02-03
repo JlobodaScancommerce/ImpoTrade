@@ -2708,6 +2708,8 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     #bottom .accordion-navigation #bottomSocialMedia a {
         display: inline-block;
         margin-right: 5px;
+        width: 41px;
+        height: 41px;
     }
 
     #bottom .accordion-navigation #bottomSocialMedia a:hover {
@@ -2717,13 +2719,18 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     #bottom .bottomPaneText {
         background-color: #d4dbdf;
         min-height: 35px;
-        color: #000;
+        color: #666666;
+        font-family: Tahoma, Arial, sans-serif;
         font-size: 12px;
         padding: 9px;
         position: absolute;
         left:0;
         right:0;
         bottom:0;
+    }
+    .footer-mail-link{
+        color: #666666;
+        font-family: Tahoma, Arial, sans-serif;
     }
 
     /*** Basket step 1 styles ***/
