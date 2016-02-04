@@ -274,6 +274,27 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 	min-height: 538px;
 }
 
+#videoModal{
+	min-height: auto;
+	padding: 0;
+	background: none;
+	box-shadow: none;
+	border: none;
+}
+
+#videoModal .flex-video{
+	background: none;
+	border-radius: 3px;
+	border: solid 1px #666;
+	box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+.reveal-modal-bg{
+	background: rgba(0,0,0,0.10);
+}
+.reveal-modal .close-reveal-modal:hover{
+	text-decoration: none;
+}
+
 @media only screen {
 
     /*** General Font styles ***/
@@ -2006,10 +2027,11 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     .basketProducts h3,
     .relatedProducts h3,
     .productsGoodMatch h3 {
-        margin: 0.9375rem 0;
-        color: #666666;
-        font-size: 18px;
-        text-transform: uppercase;
+        margin:0 0 25px 0;
+        color: #333333;
+        font-size: 30px;
+        text-transform: none;
+		font-weight: bold;
     }
 
     .multipageBdy {
@@ -2273,7 +2295,7 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     }
 	
 	.breadcrumbbdy {
-		height: 37px;
+		min-height: 37px;
 		line-height: 37px;
 		background: #fff;
 		text-align: left;
@@ -2323,7 +2345,8 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     }
 
 
-    .productElement .addToBasketLnk {
+    .productElement .addToBasketLnk, 
+	.addToBasketBtn{
         background-color: #fed03f;
         color: #FFF;
         font-family: 'Open Sans', sans-serif;
@@ -2337,10 +2360,23 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
         border-radius: 4px;
         height: 38px;
         line-height: 38px;
+		display: inline-block;
     }
+	
+	.addToBasketBtn{
+		height: 56px;
+		line-height: 56px;
+		padding: 0 15px;
+		font-size: 24px;
+		font-weight: normal;
+		margin: 0;
+	}
 
-    .productElement .addToBasketLnk:hover {
+    .productElement .addToBasketLnk:hover, 
+	.addToBasketBtn:hover{
         background-color: #dfb83f;
+		text-decoration: none;
+		color: #fff;
     }
 
     .productElement .productRemoveFromFavorites {
@@ -2477,8 +2513,8 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     }
 
     .productInfoBottomDiv .priceAndBasketDiv {
-        padding-left: 0.9375rem;
-        padding-right: 0.9375rem;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     #main #ShopContent .ucImageControl {
@@ -2493,7 +2529,7 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     #main #ShopContent .pInfoBasket .etBasket span {
         display: block;
         width: 100%;
-        padding-bottom: 0.9375rem;
+        padding-bottom: 0;
     }
 
     #main #ShopContent .pInfoBasket .etBasket .ecBB img {
@@ -2503,40 +2539,21 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     #main #ShopContent .pInfoBasket .etBasket .ecBB input,
     #main #ShopContent input.notVariantBuyInput {
         display: inline-block;
-        width: 15%;
+        width: 68px;
         text-align: center;
-        color: #868484;
-        font-size: 30px;
-        border: medium none;
-        height: 47px;
+        color: #7f9eb2;
+        font-size: 24px;
+		font-weight: bold;
+        height: 56px;
+		line-height: 56px;
+		border-radius: 5px !important;
+		border: 1px solid #7f9eb2;
         vertical-align: top;
         margin: 0px;
-        margin-bottom: 15px;
+        margin: 0 5px 0 0;		
+		padding: 0;
     }
 
-    #main #ShopContent .pInfoBasket .etBasket .ecBB a.addToBasketBtn,
-    .notVariantBuyBtn {
-        background-color: #a6da56;
-        color: #ffffff;
-        font-size: 21px;
-        text-transform: uppercase;
-        padding: 0 10px 0 10px;
-		line-height: 47px;
-        display: inline-block;
-        vertical-align: top;
-        text-decoration: none;
-        width: 85%;
-        text-align: center;
-        margin-bottom: 15px;
-    }
-
-    .notVariantBuyBtn {
-        background-color: #777c7a;
-    }
-
-    #main #ShopContent .pInfoBasket .etBasket .ecBB a.addToBasketBtn:hover {
-        background-color: #dfb83f;
-    }
 
     .ucImageControltrImg,
     #main #ShopContent .ucImageControl {
@@ -2554,10 +2571,10 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     }
 
     #etStockStatusText {
-        color: #666666;
+        color: #333333;
         font-size: 14px;
-        text-transform: uppercase;
-        margin-top: 11px;
+        text-transform: none;
+        margin-top: 5px;
     }
 
     #etStockStatusText img {
@@ -2581,29 +2598,75 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     }
 
     .pInfoProductPrices {
-        float:right;
-        text-align: right;
-        padding-bottom: 0.9375rem;
+        float:none;
+        text-align: left;
+        padding-bottom:0;
+		width: 100%;
     }
 
 	.productIdSpan {
-		font-size: 12px;
-		color: #333333;
-		font-weight: 700;
+		font-size: 14px;
+		color: #666666;
+		font-weight: normal;
+		font-style: italic;
+	}
+	
+	.custom-fields-table{
+		margin: 15px 0 20px 0;
+		border: 1px solid #cbcaca;
+		border-collapse: collapse;
+		width: 100%;
+	}
+	
+	.custom-fields-table  tr:nth-of-type(even){
+		background: none;
+	}
+	
+	.custom-fields-table td{
+		border-bottom: 1px solid #e6e6e6;
+		border-right: 1px solid #e6e6e6;
+		background: none;
+		color: #666666;
+		font-size: 14px;
+	}
+	
+	.custom-fields-table td:first-child{
+		font-weight: bold;
+	}
+	
+	.pInfoProductPrices, .betterPricingArea{
+		color: #666666;
+		font-size: 14px;
+	}
+	
+	.betterPricingArea{
+		padding: 0 0 25px 0;
+	}	
+	
+	.ProductListPriceLabel{
+		padding: 0 30px 0 0;
 	}
 
     .ProductPriceValue {
-        color: #333333;
-        font-size: 28px;
+        color: #89a5b8;
+        font-size: 30px;
+		font-weight: bold;
+		padding: 0 0 10px 0;
     }
 
 	.betterPricingArea {
 	}
 
-	.betterPricingArea > div {
-		font-weight: 700;
-		color: #333;
+	.betterPricingArea > div, .betterPricingArea > div b {
+		font-weight: normal;
+		color: #666666;
 		font-size: 14px;
+	}
+	
+	.betterPricingArea .betterPricingPrice, 
+	.betterPricingArea .betterPricing2Price, 
+	.betterPricingArea .betterPricing3Price{
+		padding: 0 0 0 30px;
 	}
 
     .ProductPreviousPriceValue {
@@ -2616,6 +2679,47 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     .productInfoBackDiv #navigateParentLnk i:before {
         content: '';
     }
+	
+	.product-files{
+		padding: 32px 0 0 0;
+	}
+	
+	.product-files ul li a{
+		color: #666666;
+		font-size: 16px;
+		text-decoration: underline; 
+		background:url('/media/340/img/pdf-icon.jpg') no-repeat 0 0;
+		padding: 0 0 0 30px;
+	}
+	
+	.product-files ul li a:hover{
+		text-decoration: none;
+	}
+	.video-link{
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		z-index: 1000;
+		color: #FFF;
+		font-size: 14px;
+		font-weight: 600;
+		padding: 0 8px 0;
+		text-transform: uppercase;
+		cursor: pointer;
+		border-radius: 4px 0 0 0 !important;
+		height: 38px;
+		line-height: 38px;
+		display: inline-block;
+		padding: 0 10px 0 30px;
+		margin: 0;
+		background: #89a5b8 url('/media/340/img/pdf-icon2.png') no-repeat 10px 50%;
+	}
+	
+	.video-link:hover{
+		text-decoration: none;
+		background-color: #718898;
+		text-decoration: none;
+	}
 
     .productNameBdy .pInfoProductName h1 {
         margin-top: 0;
@@ -2683,7 +2787,6 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 
     .relatedProducts,
     .productsGoodMatch {
-        padding: 0 0.9375rem;
         display: none;
     }
 
@@ -4126,19 +4229,8 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
         padding: 0.5rem;
     }
 
-    .productInfoBackDiv #navigateParentLnk {
-        margin-top: 0.9375rem;
-    }
-
     .productInfoBdy {
         padding-top: 385px;
-    }
-
-    .productInfoMiddleDiv {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 66px;		
     }
 
     #main #ShopContent .ucImageControl {
@@ -4151,16 +4243,6 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
         width: 100% !important;
     }
 
-    .productInfoBackDiv {
-        position: absolute;
-        left: 0.9375rem;
-        right: 0.9375rem;
-        top: 1px;
-    }
-
-    .productInfoTopDiv {
-        margin-top: 92px;
-    }
 
     /*** Basket step 1 styles ***/
 
@@ -4406,8 +4488,8 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     .productInfoBottomDiv {
         float:right;
         width: 38.4%;
-        padding-left: 0.9375rem;
-        padding-right: 0.9375rem;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .productInfoBottomDiv {
@@ -4416,14 +4498,16 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     }
 
     .productInfoBottomDiv .priceAndBasketDiv {
-        padding-left: 0.9375rem;
-        padding-right: 0.9375rem;
+        padding-left: 0;
+        padding-right: 0;
+		margin: 0 0 35px 0;
     }
 
     .productInfoMiddleDiv {
         float:left;
-        width: 60.4%;
+        width: 60%;
 		border: 1px solid #cbcaca;
+		position: relative;
     }
 
     /*** Bottompane styles ***/
@@ -4512,7 +4596,22 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 		max-height: 488px;
 		min-height: 488px;
 	}
-	
+	.productInfoBdy {
+		padding: 5px 0;
+		width: 98%;
+		margin: 0 auto;
+	}
+	.productInfoMiddleDiv{
+		width: 100%;
+		margin: 0 0 20px 0;
+		float: none;
+		position: relative;
+		border: 1px solid #cbcaca;
+	}
+	.productInfoTopDiv, .productInfoBottomDiv{
+		float: none;
+		width: 100%;
+	}
 	.content-left .teaser-boxes  img{
 		width: 100%;
 		max-height: 245px;
@@ -4558,6 +4657,22 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 @media only screen and (max-width:480px){
 	.post-content-slider img{
 		width: 100%;
+	}
+	.productInfoBdy{
+		width: 100%;
+		margin: 0;
+		border: none;
+	}
+	.productInfoMiddleDiv{
+		border-left: none;
+		border-right: none;
+	}
+	.productInfoBottomDiv{
+		width: 95%;
+		margin: 0 auto;
+	}
+	.relatedProducts{
+		margin: 0 10px;
 	}
 	#precontentContainer{
 		display: none;
@@ -4720,7 +4835,7 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     .productInfoBdy {
         padding-left: 0;
         padding-right: 0;
-		padding-top: 20px;
+		padding-top: 5px;
     }
 
 	/*** Frontpage Carousel styles ***/

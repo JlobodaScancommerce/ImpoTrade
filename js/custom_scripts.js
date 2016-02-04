@@ -901,6 +901,22 @@ function detectMobile(el){
 
 
 $( document ).ready(function() {
+
+	//Custom Fields
+	if(typeof pId!='undefined'){
+	console.log(pId);
+	var url = '/Services/ProductService.asmx/Products?v=1.0&cId=54&langId=1&countryId=11&locId=&customerId=0&imgSizeId=0&pIds=' + pId;
+		$.getJSON(url, function(result){
+			console.log(result);
+			var customFields = result.data.items[0].customFields;
+			for(var n in customFields){
+				if(n!='Lysfarve' && n!='Farvegengivelse' && n!='Video'){
+					var customFieldHtml=$("<tr><td>" + n + "</td><td>" + customFields[n] + "</td></tr>");					
+					$('.custom-fields-table').append(customFieldHtml);
+				}
+			}
+		});
+	}
 	
 	$('.customFieldFilterList h2').click(function(e) {	
 			detectMobile($(this));

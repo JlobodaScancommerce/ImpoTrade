@@ -13,6 +13,13 @@
         $('.productInfoBackDiv #navigateParentLnk').attr('href', getParentUrl);
     </script>
     <div class="productInfoMiddleDiv">
+		<a data-reveal-id="videoModal" class="video-link radius button">video</a>
+		<div id="videoModal" class="reveal-modal large" data-reveal="" aria-labelledby="videoModalTitle" aria-hidden="true" role="dialog">
+		  <div class="flex-video widescreen vimeo">
+			<iframe width="1280" height="720" src="" frameborder="0" allowfullscreen=""></iframe>
+		  </div>
+		  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+		</div>
 		 <div class="productInfoBackDiv">
 			<a id="navigateParentLnk"><i class="fa fa-angle-left"></i><eSeller:Select text="label_navigate_parentURL" /></a>
 		</div>
@@ -51,6 +58,10 @@
 		<span class="productIdSpan">
 			<eSeller:Select text="label_productIDText" />:&amp;nbsp;<eSeller:Select Value-Of="Product:ProductID" />
 		</span>
+		
+		<!-- Table Custom Fields -->
+		<table class="custom-fields-table">			
+		</table>
 		<!-- Product variants selector -->
 		<div class="variantsSelectorBdy">
 			<eSeller:If IsTrue="Product:HasVariants">
@@ -71,19 +82,12 @@
                         </div>
                     </eSeller:If>
                 </eSeller:If>
-                <eSeller:If istrue="Product:HasListprice">
-                    <div class="ProductListPriceLabel left">
-                        <eSeller:Select text="label_list_price" />
-                    </div>
-                    <div class="ProductListPriceValue left">
-                        <eSeller:Select Value-Of="Product:Pricing.ListTagPriceFormatted" />
-                    </div><div style="clear:both;"></div>
-                </eSeller:If>
+				
                 <eSeller:If IsTrue="Product:HasBetterPricing">
 					<!--HasBetterPricing-->
                     <div class="betterPricingArea">
                         <div style="float:left" class="betterPricingVol">
-                            <eSeller:Select text="label_Quantity1_text" />&amp;nbsp;<b><eSeller:Select Value-Of="Product:BetterPricing.QuantityFormatted" /></b>
+                            <b><eSeller:Select Value-Of="Product:BetterPricing.QuantityFormatted" /></b>
                         </div>
                         <div style="float:left" class="betterPricingStepInfo">
                             &amp;nbsp;<eSeller:Select text="label_BetterPricingStepInfo" />&amp;nbsp;
@@ -98,7 +102,7 @@
 
                         <eSeller:If IsTrue="Product:HasBetterPricing2">
                             <div style="float:left" class="betterPricing2Vol">
-                                <eSeller:Select text="label_Quantity2_text" />&amp;nbsp;<b><eSeller:Select Value-Of="Product:BetterPricing2.QuantityFormatted" /></b>
+                                <b><eSeller:Select Value-Of="Product:BetterPricing2.QuantityFormatted" /></b>
                             </div>
                             <div style="float:left" class="betterPricing2StepInfo">
                                 &amp;nbsp;<eSeller:Select text="label_BetterPricing2StepInfo" />&amp;nbsp;
@@ -114,11 +118,11 @@
 
                         <eSeller:If IsTrue="Product:HasBetterPricing3">
                             <div style="float:left" class="betterPricing3Vol">
-                                <eSeller:Select text="label_Quantity3_text" />&amp;nbsp;<b><eSeller:Select Value-Of="Product:BetterPricing3.QuantityFormatted" /></b>
+                                <b><eSeller:Select Value-Of="Product:BetterPricing3.QuantityFormatted" /></b>
                             </div>
-                            <div style="float:left" class="betterPricing3StepInfo">
-                                &amp;nbsp;<eSeller:Select text="label_BetterPricing3StepInfo" />&amp;nbsp;
-                            </div>
+							<div style="float:left" class="betterPricingStepInfo">
+								&amp;nbsp;<eSeller:Select text="label_BetterPricingStepInfo" />&amp;nbsp;
+							</div>
                             <div style="float:left" class="betterPricing3Price">
                                 <b><eSeller:Select Value-Of="Product:BetterPricing3.TagPriceFormatted" /></b>&amp;nbsp;
                             </div>
@@ -130,31 +134,7 @@
                     </div>
                 </eSeller:If>
             </div>
-            <!--Product prices area end-->
-            <!--Stock status area start-->
-            <div class="pInfoStockStatus left">
-                <div id="etStockStatusText">
-					<eSeller:If IsFalse="Product:HasVariants">
-						<eSeller:If IsTrue="Product:IsInStock">
-							<span class="inStockIcon"></span>&amp;nbsp;<eSeller:Select text="label_productInStock_text" />
-						</eSeller:If>
-						<eSeller:If IsTrue="Product:IsNotInStock">
-							<span class="isNotInStockIcon"></span>&amp;nbsp;<eSeller:Select text="label_productIsNotInStock_text" />
-						</eSeller:If>
-					</eSeller:If>
-					<eSeller:If IsTrue="Product:HasVariants">
-						<eSeller:If IsTrue="Product:IsVariant">
-							<eSeller:If IsTrue="Product:IsInStock">
-								<span class="inStockIcon"></span>&amp;nbsp;<eSeller:Select text="label_productInStock_text" />
-							</eSeller:If>
-							<eSeller:If IsTrue="Product:IsNotInStock">
-								<span class="isNotInStockIcon"></span>&amp;nbsp;<eSeller:Select text="label_productIsNotInStock_text" />
-							</eSeller:If>
-						</eSeller:If>
-					</eSeller:If>
-                </div>
-            </div><div style="clear:both;"></div>
-            <!--Stock status area end-->			
+            <!--Product prices area end-->           			
             <!--Basket area start-->
             <div class="pInfoBasket clearfix">
                 <eSeller:If IsFalse="Product:HasVariants">
@@ -207,35 +187,34 @@
 				</eSeller:If>
             </div>
             <!--Basket area end-->
+			 <!--Stock status area start-->
+            <div class="pInfoStockStatus left">
+                <div id="etStockStatusText">
+					<eSeller:If IsFalse="Product:HasVariants">
+						<eSeller:If IsTrue="Product:IsInStock">
+							<span class="inStockIcon"></span>&amp;nbsp;<eSeller:Select text="label_productInStock_text" />
+						</eSeller:If>
+						<eSeller:If IsTrue="Product:IsNotInStock">
+							<span class="isNotInStockIcon"></span>&amp;nbsp;<eSeller:Select text="label_productIsNotInStock_text" />
+						</eSeller:If>
+					</eSeller:If>
+					<eSeller:If IsTrue="Product:HasVariants">
+						<eSeller:If IsTrue="Product:IsVariant">
+							<eSeller:If IsTrue="Product:IsInStock">
+								<span class="inStockIcon"></span>&amp;nbsp;<eSeller:Select text="label_productInStock_text" />
+							</eSeller:If>
+							<eSeller:If IsTrue="Product:IsNotInStock">
+								<span class="isNotInStockIcon"></span>&amp;nbsp;<eSeller:Select text="label_productIsNotInStock_text" />
+							</eSeller:If>
+						</eSeller:If>
+					</eSeller:If>
+                </div>
+            </div><div style="clear:both;"></div>
+            <!--Stock status area end-->
+			<div class="product-files">
+				<eSeller:Control ControlType="ProductDocuments" ControlID="ProductDocuments" />
+			</div>
         </div>
-        <!-- Info description area start -->
-        <div class="infoDropdownBdy">
-            <ul class="accordion" data-accordion="">
-				<eSeller:If isnotempty="Product:ProductLongDescription">
-                <li class="accordion-navigation active">
-                    <a href="#panel1a"><eSeller:Select text="label_info_dropdown_01" /></a>
-                    <div id="panel1a" class="content active">
-						<div id="etLongDesc">
-							<eSeller:Select Value-Of="Product:ProductLongDescription" />
-						</div>
-                    </div>
-                </li>
-				</eSeller:If>
-                <li class="accordion-navigation">
-                    <a href="#panel2a"><eSeller:Select text="label_info_dropdown_02" /></a>
-                    <div id="panel2a" class="content">
-                        <eSeller:Select Value-Of="CmsSpecialPages:Text(&quot;return_text&quot;)" />
-                    </div>
-                </li>
-                <li class="accordion-navigation">
-                    <a href="#panel3a"><eSeller:Select text="label_info_dropdown_03" /></a>
-                    <div id="panel3a" class="content">
-                        <eSeller:Select Value-Of="CmsSpecialPages:Text(&quot;delivery_text&quot;)" />
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <!-- Info description area end -->
     </div>
     <div style="clear:both;"></div>
     <div class="relatedProducts">
@@ -265,6 +244,11 @@
 
 <script type="text/javascript">
 	var pId = '<eSeller:Select value-of="Product:ProductID" />';
+	var videoLink='<eSeller:Select Value-Of="Product:CustomFields.10" />';
+	$('#videoModal iframe').attr('src', videoLink);
+	if(videoLink==''){
+		$('.video-link').hide();
+	}
 </script>
 
 <script src="/media/340/js/JsonProductList.js"></script>
