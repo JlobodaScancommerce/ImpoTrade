@@ -1,0 +1,77 @@
+<style type="text/css">
+	#ucInfoMessagebdy {
+		display: none !important;	
+	}
+</style>
+
+<!--
+<div class="menuDescriptionBdy menusHeader">
+    <h2><eSeller:Select text="label_searchResults_header_menus" /></h2>
+</div>
+
+<div class="searchResultsMenusBdy">
+	
+</div>
+-->
+
+
+<div class="menuDescriptionBdy productsHeader">
+    <h2><eSeller:Select text="label_searchResults_header" /></h2>
+</div>
+
+<div class="searchResultsProductsOuterBdy">
+    <div id="searchResultsProductsBdy" class="jsonProducts"></div>
+</div>
+
+<div class="searchResultsBdy">
+	<div class="error box">
+		<h2><eSeller:Select text="label_searchResults_header" /></h2>
+		<eSeller:Select text="label_searchResults_text" />
+	</div>
+    <eSeller:Control ControlType="ProductList" ControlId="MainProductList" DataProvider="" IsMainProductList="true" />
+</div>
+
+<div class="hiddenText" style="display:none!important">
+    <!-- This is used to create text for the json productlist -->
+    <span class="goodDealText"><eSeller:Select text="label_goodDealText" /></span>
+    <span class="deprecatedText"><eSeller:Select text="label_deprecatedText" /></span>
+</div>
+
+<script type="text/javascript">
+	
+	//Get all product ids from old productlist
+	var getAllSearchProductsIDs = ""; //Collect all product IDs from current search results for jsonurl
+	var getAllSearchProductsIDsArray = []; //Collect product IDs into array for sorting later
+	var countSearchProductsIDsArray = 0;
+	$("#ShopContent .searchResultsBdy .elementKindProduct .prmain .hlink").each(function( index ) {
+		countSearchProductsIDsArray++;
+		getAllSearchProductsIDs += $(this).attr('href').match(/_([0-9].*)_/)[1]; //Get current product ID
+		getAllSearchProductsIDs += ";";
+		getAllSearchProductsIDsArray.push($(this).attr('href').match(/_([0-9].*)_/)[1]); //Push this ID to the array
+		getAllSearchProductsIDsArray.push(countSearchProductsIDsArray);
+	});
+	getAllSearchProductsIDs = getAllSearchProductsIDs.slice(0,-1);
+	
+	//Get values for Json product list
+    var serial = "<eSeller:Select Value-Of="Context:ProductlistCacheKey" />" + window.location.host;
+    var locId = <eSeller:Select Value-Of="context:location.InternalID" />;
+    var langId = <eSeller:Select Value-of="context:Language.LanguageID" />;
+    var cId = <eSeller:Select Value-of="context:Currency.CurrencyID" />;
+    var contId = <eSeller:Select Value-of="context:Country.CountryID" />;
+    var deprecatedProductText = '<eSeller:Select text="lable_deprecatedProduct_text" />';
+	
+	//Get all menus from old productlist
+	var getAllMenusHtml = "";
+	$("#ShopContent .searchResultsBdy .elementKindMenu").each(function( index ) {
+		getAllMenusHtml += $(this).html();
+	});
+	var getAllArticleHtml = "";
+	$("#ShopContent .searchResultsBdy .elementKindArticle").each(function( index ) {
+		getAllArticleHtml += $(this).html();
+	});
+	$('#ShopContent .searchResultsMenusBdy').append(getAllMenusHtml);
+	$('#ShopContent .searchResultsMenusBdy').append(getAllArticleHtml);
+	
+</script>
+
+<script src="/media/309/js/JsonProductList.js?demoshop"></script>

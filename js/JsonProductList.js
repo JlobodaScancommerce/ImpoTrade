@@ -289,12 +289,15 @@ weightBeforeZipCode=200000;
 				//tinysort('#searchResultsProductsBdy ul li',{attr: 'id'});
 				if($('#searchResultsProductsBdy .productElement').length > 0) {
 					$('.productsHeader h2').show();
+					$('.error-box').hide();
+				}  else{
+					$('.error-box').show();
 				}
 
 				if($('.searchResultsMenusBdy .prmain').length > 0) {
 					$('.menusHeader h2').show();
 				}
-			}
+			};
 
 			updateUrl();
 
@@ -734,8 +737,11 @@ if($('.basketProducts').length > 0){
 }
 
 if($('.searchResultsProductsOuterBdy').length > 0){
-	productList = '/Services/ProductService.asmx/ProductList?v=1.0&cId=54&langId=1&so=0&countryId=11&locId=&customerId=&imgSizeId=0&pIds=';
+	//productList= '/Services/ProductService.asmx/ProductList?v=1.0&so=1&cId=54&langId=1&countryId=11&locId=&customerId=r/PBJU4aAIz+OJ40XGWJnXjFTdjb2123456P2geSqRDk4sEdN8Hasg==&mId=6692&p=1&rp=25&imgSizeId=0';
+	productList = '/Services/ProductService.asmx/ProductList?v=1.0&cId=54&langId=1&so=0&countryId=11&locId=&customerId=0&imgSizeId=0&pIds=';
 	productList += '&search=' + jsonSearchQueryString;
+	console.log(productList);
+
 }
 
 if($('#favoriteProductsJsonBdy').length > 0){

@@ -1,0 +1,54 @@
+<style type="text/css">
+	#ucInfoMessagebdy {
+		display: none !important;
+	}
+</style>
+<div class="content-container search-results">
+<div class="menuDescriptionBdy menusHeader">
+    <h2><eSeller:Select text="label_searchResults_header_menus" /></h2>
+</div>
+
+<div class="searchResultsMenusBdy">
+	<!-- DO NOT DELETE: this is used for .elementKindMenu items for optimized styling and control -->
+</div>
+
+<div class="menuDescriptionBdy productsHeader">
+    <h2 class="results-heading"><eSeller:Select text="label_searchResults_header" /></h2>
+</div>
+
+<div class="searchResultsProductsOuterBdy">
+    <div id="searchResultsProductsBdy" class="jsonProducts"></div>
+</div>
+
+<div class="searchResultsBdy">
+	<div class="error-box">
+		<h2><eSeller:Select text="label_searchResults_header" /></h2>
+		<eSeller:Select text="label_searchResults_text_error" />
+	</div>
+    <eSeller:Control ControlType="ProductList" ControlId="MainProductList" DataProvider="" IsMainProductList="true" />
+</div>
+
+<div class="hiddenText" style="display:none!important">
+    <!-- This is used to create text for the json productlist -->
+    <span class="goodDealText"><eSeller:Select text="label_goodDealText" /></span>
+    <span class="deprecatedText"><eSeller:Select text="label_deprecatedText" /></span>
+    <span class="noveltyProductText"><eSeller:Select text="label_noveltyProductText" /></span>
+</div>
+</div>
+<script type="text/javascript">
+	
+	
+	
+	//Get values for Json product list
+    var serial = "<eSeller:Select Value-Of="Context:ProductlistCacheKey" />" + window.location.host;
+    var locId = <eSeller:Select Value-Of="context:location.InternalID" />;
+    var langId = <eSeller:Select Value-of="context:Language.LanguageID" />;
+    var cId = <eSeller:Select Value-of="context:Currency.CurrencyID" />;
+    var contId = <eSeller:Select Value-of="context:Country.CountryID" />;
+    var deprecatedProductText = '<eSeller:Select text="lable_deprecatedProduct_text" />';
+	var jsonSearchQueryString = '<eSeller:Select Value-of="context:QueryparmValue(&quot;searchtext&quot;)" />';
+
+        $("h2.results-heading").text('Din søgning på "' + jsonSearchQueryString + '" gav følgende resultat');
+</script>
+
+<script src="/media/340/js/JsonProductList.js"></script>
