@@ -487,6 +487,7 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 
     #ShopContent {
         text-align: left;
+        padding-top: 20px;
     }
 
     #bottom {
@@ -1692,7 +1693,7 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 
     .row.product-list{
       max-width:100%;
-	  margin: 20px 0 0 0;
+	  margin: 0;
     }
 
     .contentOuterBdy {
@@ -3153,8 +3154,7 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 
     /*** Onepage checkout styles ***/
 
-    .basketMyInformationOuter > div,
-    .basketMyOrderBdy > div {
+    .basketMyInformationOuter > div {
         padding: 0.9375rem;
         margin: 0.9375rem 0;
     }
@@ -3279,6 +3279,8 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
         background-color: #333333;
         border-radius: 50%;
         width: 30px;
+        height: 30px;
+        line-height: 30px;
         color: #fff;
         font-size: 20px;
         text-align: center;
@@ -3495,7 +3497,7 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
         position: absolute;
         top: 0px;
         z-index: 200;
-        border: solid 2px #d0d0d0;
+        border: solid 2px #92acbe;
         background-color: #FFFFFF;
         max-width: 600px;
         left: 50%;
@@ -3503,11 +3505,17 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 
     #ucInfoMessagebdy div.addedToBasketMsgOuterDiv > div,
     #main #ucInfoMessagebdy div.notAddedToBasket {
-        background: #d3d3d3;
+        background: #b1c7d7;
         border: 1px solid #FFFFFF;
         padding: 40px;
         margin: 0 !important;
         text-align: center;
+    }
+
+    #ucInfoMessagebdy .warning.notAddedToBasket a,
+    #ucInfoMessagebdy .warning a{
+        color: #ad3535;
+        text-decoration: underline;
     }
 
     #ucInfoMessagebdy div.addedToBasketMsgOuterDiv > div.ucInfoMessageContent {
@@ -3853,7 +3861,12 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 
 @media only screen and (max-width: 40em) {
 
-    /*** Content styles ***/
+    /* Mobile styles start */
+    .basketOuterBdy{
+        padding: 0 10px;
+    }
+
+        /*** Content styles ***/
 
     .bottomPaneQuickLinks h4{
       padding-top:6px;
@@ -4188,6 +4201,10 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 
     .accordion-navigation.socialMedia #bottomSocialMedia {
         display: block !important;
+    }
+
+    .product-filter.columns{
+        padding-left: 5px !important;
     }
 
     /*** Product detail styles ***/
@@ -4591,6 +4608,7 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
         min-height: 213px;
     }
 
+
 } /* min-width 641px, medium screens */
 
 @media only screen and (max-width:800px){
@@ -4602,8 +4620,7 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 		min-height: 488px;
 	}
 	.productInfoBdy {
-		padding: 20px 0;
-		width: 98%;
+		padding: 0;
 		margin: 0 auto;
 	}
 	.productInfoMiddleDiv{
@@ -4725,6 +4742,12 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 
 
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+
+    /* Tablet styles start */
+
+    #ShopContent{
+        padding: 20px 10px 0;
+    }
 
     /*** Bottompane tablet only styles ***/
 
