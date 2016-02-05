@@ -2452,11 +2452,15 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     }
 
     .productElement .productRemoveFromFavorites {
+        background: url("/SL/SI/822/50/f36e3098-5799-4978-95cc-1c7ed0df3f0a.png") no-repeat 0 11px;
         margin-left: 5px;
         font-size: 24px;
         color: #c72b2b;
-        font-family: arial;
+        font-family: Arial, sans-serif;
         line-height: 32px;
+        width: 18px;
+        height: 32px;
+        text-indent: -99999em;
     }
 
     .productElement .productRemoveFromFavorites:hover {
@@ -2834,19 +2838,20 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     }
 
     .addToFavoritesBdy {
-        margin-bottom: 0.9375rem;
+        margin: 0.9375rem 0;
     }
 
     .addToFavoritesLnk {
         color: #868484;
         font-size: 16px;
         text-decoration: none;
-        text-transform: uppercase;
+        font-weight: bold;
         display: block;
     }
 
     .addToFavoritesLnk:hover {
         color: #868484;
+        text-decoration: none;
     }
 
     .addToFavoritesLnk i {
