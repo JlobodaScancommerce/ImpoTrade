@@ -2295,7 +2295,7 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     }
 	
 	.breadcrumbbdy {
-		min-height: 37px;
+		height: 37px;
 		line-height: 37px;
 		background: #fff;
 		text-align: left;
@@ -2699,7 +2699,7 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 		position: absolute;
 		bottom: 0;
 		right: 0;
-		z-index: 1000;
+		z-index: 200;
 		color: #FFF;
 		font-size: 14px;
 		font-weight: 600;
@@ -4602,7 +4602,7 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 		min-height: 488px;
 	}
 	.productInfoBdy {
-		padding: 5px 0;
+		padding: 20px 0;
 		width: 98%;
 		margin: 0 auto;
 	}
@@ -4659,9 +4659,20 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
 
 }
 
+@media only screen and (max-width:603px){
+	.breadcrumbbdy {
+		min-height: 37px;
+		height: auto;
+	}
+}
+
 @media only screen and (max-width:480px){
 	.post-content-slider img{
 		width: 100%;
+	}
+	.breadcrumbbdy {
+		min-height: 37px;
+		height: auto;
 	}
 	.productInfoBdy{
 		width: 100%;
@@ -4840,7 +4851,7 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     .productInfoBdy {
         padding-left: 0;
         padding-right: 0;
-		padding-top: 5px;
+		padding-top: 20px;
     }
 
 	/*** Frontpage Carousel styles ***/
