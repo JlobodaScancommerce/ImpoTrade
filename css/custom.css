@@ -3773,7 +3773,7 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     }
 
     .orderListBdy table td a {
-        color: #4da47b;
+        color: #92acbe;
         text-decoration: underline;
     }
 
@@ -3785,7 +3785,7 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     /*** Customer order detail styles ***/
 
     .orderDetailBdy > a {
-        color: #4da47b;
+        color: #92acbe;
         text-decoration: underline;
         font-size: 12px;
         margin-bottom: 0.9375rem;
@@ -4498,6 +4498,10 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     }
 
     /*** Customer order detail styles ***/
+
+    .orderDetailBdy{
+        padding: 0 5px;
+    }
 
     .OrderDetailsBdy #ec54 table .c2,
     .OrderDetailsBdy #ec54 table .c6 {
