@@ -1,0 +1,59 @@
+<div id="outerBdy" class="off-canvas-wrap cms-template" data-offcanvas>
+    <div class="inner-wrap">
+        <aside id="leftOffCanvasMenu" class="left-off-canvas-menu">
+            <eSeller:Container ContainerName="leftOffCanvas" CssId="#leftOffCanvasMenu" />
+        </aside>
+        <div id="main">
+            <div id="mainInnerBdy">
+				<div class="main-cms">
+					<div class="topMenuOuterBdy clearfix">
+						<div id="BroadTopMenu" class="hide-for-small-only medium-12 columns">
+							<eSeller:Container ContainerName="BroadTopMenu" CssId="#BroadTopMenu" />
+						</div>
+						<div id="topbanner" class="left small-12 medium-3 columns">
+							<a href="/">
+								<img src="/media/340/img/topbanner.png" alt="miveo" />
+							</a>
+						</div> 
+						<div id="rightTop" class="right small-12 medium-9 columns">
+							<eSeller:Container ContainerName="rightTop" CssId="#rightTop" />
+						</div>
+						<div id="topMenu" class="small-12 columns clearfix">
+							<eSeller:Container ContainerName="topMenu" CssId="#topMenu" />            
+						</div>
+					</div>
+				</div>
+					
+				<div id="topBanner" class="banner-cms">
+				  <eSeller:Container ContainerName="topArea" ContainerType="TopBanner" CssId="#topBanner"/>
+				</div>
+		
+                <div class="contentOuterBdy clearfix">
+                    <div class="contentPane small-12 columns">
+                        <eSeller:Content ContainerName="content" CssId=".contentPane" />
+                    </div>
+					<script type="text/javascript">
+						if($('#ucInfoMessagebdy > div').length > 0) { 	
+							//Create negative margin-left to make sure the msgbox is in center of the screen
+							var widthOfMsgBox = $('#ucInfoMessagebdy').width();
+							widthOfMsgBox = widthOfMsgBox / 2;
+							widthOfMsgBox = widthOfMsgBox + 34;
+							widthOfMsgBox = -Math.abs(widthOfMsgBox);
+							$('#ucInfoMessagebdy').css('margin-left',widthOfMsgBox);
+						}
+					</script>
+                </div>
+            </div>
+        </div>
+        <!-- close the off-canvas menu -->
+        <a class="exit-off-canvas"></a>
+    </div>
+    <div id="bottom">
+        <eSeller:Container ContainerName="bottomPane" CssId="#bottom" ContainerType="ShopBottom" AllowShopElements="True" />
+    </div>
+</div>
+
+<script src="/media/340/js/foundation.min.js"></script>
+<script type="text/javascript">
+	$(document).foundation();
+</script>
