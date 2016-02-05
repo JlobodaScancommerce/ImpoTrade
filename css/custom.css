@@ -3473,6 +3473,8 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
         background-color: #333333;
         border-radius: 50%;
         width: 30px;
+        height: 30px;
+        line-height: 30px;
         color: #fff;
         font-size: 20px;
         text-align: center;
