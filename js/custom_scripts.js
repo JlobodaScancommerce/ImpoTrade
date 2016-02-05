@@ -901,7 +901,12 @@ function detectMobile(el){
 
 
 $( document ).ready(function() {
-
+	
+	$('#navigateParentLnk').click(function(event) {	
+		event.preventDefault();
+		history.back(1);
+	});		
+	
 	//Custom Fields
 	if(typeof pId!='undefined'){
 	console.log(pId);
