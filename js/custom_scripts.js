@@ -1197,6 +1197,15 @@ $( document ).ready(function() {
 		$( ".newsletterBox p" ).show();
 	});
 
+
+	setTimeout(function(){
+		var searchBox = $(".search-results .searchResultsProductsOuterBdy .jsonProducts ul.products");
+
+		if(searchBox.find("li").length > 0){
+			$(".searchResultsBdy .plistAreaHeader").css("display", "none");
+		}
+	}, 3000);
+
 });
 
 
