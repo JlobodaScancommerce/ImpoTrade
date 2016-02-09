@@ -1250,6 +1250,11 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
         padding-left: 36px;
         min-width: 325px;
     }
+    #advancedSearchBdy input.textbox::-ms-clear {
+        width : 0;
+        height: 0;
+        display: none;
+    }
 
     #advancedSearchBdy input.submit {
 		position: absolute;
