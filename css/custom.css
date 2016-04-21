@@ -1169,7 +1169,7 @@ meta.foundation-version{font-family:"/5.5.1/"}meta.foundation-mq-small{font-fami
     }
 
     #topMenuQuickLinks ul.f-dropdown > div > li {
-        display: inline-block;
+        display: block;
         vertical-align: top;
         width: 25%;
     }
